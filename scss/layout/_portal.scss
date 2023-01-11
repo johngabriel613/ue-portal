@@ -1,0 +1,169 @@
+.portal{
+    &__wrapper{
+        display: flex;
+        min-height: 100vh;
+        
+        &__form{
+            width: 100%;
+            border-radius: 0 100px 0 0;
+            display: grid;
+            place-items: center;
+            background: #fff;
+            padding:50px  20px;
+            
+            
+            &__wrapper{
+                max-width: 400px;
+                
+
+                &__title{
+                    position: relative;
+                    margin-bottom: 20px;
+                    h1{
+                        color: #9F1015;
+                        font-size: 3rem;
+                    }
+
+                    h1,h2{
+                        margin-left: 10px;
+                    }
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 100%;
+                        background: #9F1015;
+                    }
+                }
+
+                &__field{
+                    display: grid;
+                    gap: .5rem;
+
+                    
+
+                    &__input{
+                        position: relative;
+                        
+                        
+                        input{
+                            width: 100%;
+                            padding: 25px 15px 10px;
+                            background: #EEEEEE;
+                        }
+
+                        label{
+                            position: absolute;
+                            left: 15px;
+                            top: 17.5px;
+                            color: #808080;
+                            transition: .3s ease-in-out;
+                        }
+
+                        #show-hide-pass{
+                            position: absolute;
+                            top: 21px;
+                            right: 15px;
+                            width: 1.2rem;
+                        }
+
+                        a{
+                            color: #9F1015;
+                            float: right;
+                            font-size: .9rem;
+                        }
+
+                        #captcha-img{
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: .3s ease;
+                        }
+
+                        &.focus #captcha-img{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                        &.focus label{
+                            font-size: .8rem;
+                            top: 5px;
+                        }
+                        
+                    }
+
+                    &__button{
+
+                        margin-top: 25px;
+                        button{
+                            padding:17.5px;
+                            width: 100%;
+                            background: #9F1015;
+                            color: #fff;
+                        }
+
+                    }
+
+                    #terms{
+                            font-size: .9rem;
+                            
+                            a{
+                                color: #9F1015;
+                            }
+                    }
+                }
+            }
+        }
+
+        &__hero{
+            width: 100%;
+            background: url(../assets/ue-bg.png) center no-repeat;
+            background-size: cover;
+            display: grid;
+            place-items: center;
+            border-radius: 0 0 0 100px;
+            padding: 20px;
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: #9F1015;
+                top: 0;
+                left: -100px;
+                z-index: -1;
+            }
+            
+            img{
+                max-width: 350px;
+            }
+
+        }
+
+        @media screen and (max-width:1024px) {
+            flex-direction: column-reverse;
+            justify-content:flex-end;
+
+            &__form{
+                border-radius: 50px 0 0 0;
+            }
+
+            &__hero{
+                border-radius: 0 0 50px 0;
+
+                &::before{
+                    top: 125px;
+                    left: 0;
+                }
+                img{
+                    max-width:100px ;
+                }
+            }
+        }
+    }
+}

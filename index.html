@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UE | Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <div class="portal">
+        <div class="portal__wrapper">
+            <form class="portal__wrapper__form">
+                <div class="portal__wrapper__form__wrapper">
+                    <div class="portal__wrapper__form__wrapper__title">
+                        <h1>Student</h1>
+                        <h2>Portal v3</h2>
+                    </div>
+                    <div class="portal__wrapper__form__wrapper__field">
+                        <div class="portal__wrapper__form__wrapper__field__input">
+                            <input type="text" name="studno" id="studno" class="js-input">
+                            <label for="studno">Student Number</label>
+                        </div>
+                        <div class="portal__wrapper__form__wrapper__field__input">
+                            <input type="password" name="acode" id="acode" class="js-input js-pass">
+                            <label for="acode">Access Code</label>
+                            <img id="show-hide-pass" src="assets/showPass.svg" alt="">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <div class="portal__wrapper__form__wrapper__field__input">
+                            <input type="text" name="captcha" id="captcha" class="js-input">
+                            <label for="captcha">Antibot Validation</label>
+                            <img id="captcha-img" src="https://www.ue.edu.ph/portals/sp/c3po/" alt="">
+                        </div>
+                        <div class="portal__wrapper__form__wrapper__field__button">
+                            <button>Sign in</button>
+                        </div>
+                        <p id="terms">By using this service, you understood and agree to the UE Online Services <a href="#">Terms of Use</a> and <a href="#">Privacy Statement</a>.</p>
+                    </div>
+                </div>
+            </form>
+            <div class="portal__wrapper__hero">
+                <img src="assets/ue-logo.png" alt="logo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
