@@ -50,8 +50,8 @@ h1, h2{
 //border and outline
 
 input, button{
-    border: transparent;
-    outline: none;
+    border: none;
+    outline: 2px solid transparent;
     border-radius: 5px;
 }
 
